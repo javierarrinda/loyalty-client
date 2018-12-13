@@ -29,7 +29,7 @@ class Login extends Component {
             // and we're setting AppComponent.state.loggedinuser equal to it
 
 
-            this.props.history.push('/project-index');
+            this.props.history.push('/restaurant-index');
             // then we redirect
             
 

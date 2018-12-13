@@ -21,6 +21,7 @@ class App extends Component {
 
 
   componentDidMount(props){
+    console.log('in app')
     this.fetchUser()
   }
 
@@ -31,6 +32,7 @@ class App extends Component {
       // if( this.state.loggedInUser === null ){
         this.service.loggedin()
         .then(theActualUserFromDB =>{
+          console.log(theActualUserFromDB)
           this.setState({
             loggedInUser:  theActualUserFromDB
           }) 

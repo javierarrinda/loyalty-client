@@ -29,14 +29,12 @@ class RestaurantIndex extends Component{
 
     fetchCustomers = () =>{
         console.log(this)
-        if(!this.props.currentUser){
-            return;
-        }
+
         console.log(this.props)
-        Axios.get('http://localhost:5000/api/customers/'+this.props.currentUser._id)
-        .then((responseFromApi)=>{
+        Axios.get('http://localhost:5000/api/customers', {withCredentials: true})
+            .then((responseFromApi)=>{
             console.log(responseFromApi);
-            this.setState({allTheCustomers: responseFromApi.data.reverse()}) 
+            this.setState({allTheCustomers: responseFromApi.data.customerForThisRest.reverse()}) 
             // .reverse is just so we see the newest tasks at the top of the page
             // once we get all the tasks, we set the state so that the state will have all the tasks in there
         })
@@ -52,17 +50,19 @@ class RestaurantIndex extends Component{
         if(this.state.allTheCustomers && this.props.currentUser){
 
             const myCustomers = this.state.allTheCustomers.filter((eachCustomer)=>{
-                return eachCustomer.owner === this.props.currentUser._id
+                //return eachCustomer;
+                return eachCustomer.restaurantID === this.props.currentUser._id
             })
+            console.log(myCustomers)
 
             // once we have all the tasks in the state, we can map through them as we normally do
             return myCustomers.map((eachCustomer)=>{
                 return(
                     <div key={eachCustomer._id}>
-                    {/* <h3>{eachCustomer.name}</h3>
+                     <h3>{eachCustomer.name}</h3>
                     <h6>{eachCustomer.description}</h6>
 
-                    <Link to={'/project/'+ eachCustomer._id} >See Details</Link> */}
+                    <Link to={'/project/'+ eachCustomer._id} >See Details</Link> 
                 </div>
             )
         })
