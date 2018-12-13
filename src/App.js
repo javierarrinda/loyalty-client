@@ -4,6 +4,7 @@ import UserService from './services/UserService';
 import {Route, Switch, Link} from 'react-router-dom';
 import Signup from './components/Signup';
 import Login from './components/Login';
+import CustomerDetails from './components/CustomerDetails';
 
 import RestaurantIndex from './components/RestaurantIndex';
 
@@ -102,7 +103,7 @@ class App extends Component {
           <Route path="/signup" render = {(props)=> <Signup {...props} logTheUserIntoAppComponent = {this.logInTheUser} />  } />
 
           <Route path="/restaurant-index" render={(props) => <RestaurantIndex {...props} currentUser={this.state.loggedInUser} /> } />
-
+          <Route path="/customers/details/:id" component = {CustomerDetails} />
         </Switch>
       
       </div>

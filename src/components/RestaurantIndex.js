@@ -58,11 +58,15 @@ class RestaurantIndex extends Component{
             // once we have all the tasks in the state, we can map through them as we normally do
             return myCustomers.map((eachCustomer)=>{
                 return(
-                    <div key={eachCustomer._id}>
-                     <h3>{eachCustomer.name}</h3>
-                    <h6>{eachCustomer.description}</h6>
+                    <div key={eachCustomer._id} className="countries-flex">
+                    <div className="box-for-each-customer">
 
-                    <Link to={'/project/'+ eachCustomer._id} >See Details</Link> 
+                     <h3>{eachCustomer.name}</h3>
+                     <h3>Phone #: {eachCustomer.phone}</h3>
+                    <h4>Spent: {eachCustomer.spending}</h4>
+
+                    <Link to={'/customers/details'+ eachCustomer._id} >See Details</Link> 
+                    </div>
                 </div>
             )
         })
@@ -76,17 +80,18 @@ class RestaurantIndex extends Component{
         return(
             <div>
             <h1>Your Customers</h1>
+       
+            <div className="add-new-customer">
+            <AddNewCustomer letTheIndexComponentKnowThatWeAddedACustomer = {this.fetchCustomers} />
+            {/* we pass in this function so that after we add a new project in the addNewProject component */}
+            {/* that component will be able to tell this component to go check for new projects */}
+            </div>
 
             <div className="show-all-customers">
             {this.showAllCustomers()}
             </div>
 
 
-            <div className="add-new-customer">
-            <AddNewCustomer letTheIndexComponentKnowThatWeAddedACustomer = {this.fetchCustomers} />
-            {/* we pass in this function so that after we add a new project in the addNewProject component */}
-            {/* that component will be able to tell this component to go check for new projects */}
-            </div>
 
 
             </div>
