@@ -39,6 +39,10 @@ class UserService {
         .then(response => response.data)
     }
 
+    getAllCustomers = () =>{
+        return this.service.get('/customers')
+        .then(response => response.data)
+    }
 
 
 

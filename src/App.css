@@ -8,8 +8,8 @@ nav{
 }
 
 nav p{
-  display: flex;
-  justify-content: flex-start;
+  margin-right: 60vw;
+  font-size: 1.3em;
 }
 
 .link{
@@ -41,4 +41,14 @@ nav p{
 
 label{
   border-radius: 3px;
+}
+
+.update-through-phone{
+  border: 2px solid black;
+  border-radius: 6px;
+  height: 250px;
+  padding: 10px;
+  width: 300px;
+  float: left;
+  margin-right: 3vw;
 }

@@ -5,27 +5,22 @@ import {Link} from 'react-router-dom';
 
 
 import AddNewCustomer from './AddNewCustomer';
+import UpdateSpending from './UpdateSpending';
 
 class RestaurantIndex extends Component{
     state={
         allTheCustomers: []
     }
-
-    // keep in mind, the first time the render function runs, the state will look exactly like we set it up in the contstructor above
-    // so since we are doint this.state.alltheProject.map, equalling to an empty array in the beginning is a clever trick because
-    // this first time the component renders, the state will have an empty array and will loop through that empty array and show nothing
-    // you will not see this because it happens very quickly
-    // however, if we do start out be equalling our this.state.alltheProjects to an empty array,
-    // we will get an error because we are trying to do .map on null, but you are not allowed to do that
-
-// componentWillMount runs everytime the component is about to be rendered on the page
-// in this function, we will make an axios request to our api route
-// the response we ge back should be equal to an object with a .data key inside it, and that .data will be equal to all the tasks from our API
-
+    
     componentWillMount(){
-       this.fetchCustomers()
+        this.fetchCustomers()
     }
-
+    // componentWillMount runs every time the component is about to be rendered on the page
+    // in this function, we will make an axios request to our api route
+    // the response we ge back should be equal to an object with a .data key inside it, and that .data will be equal to all the tasks from our API
+    updateCustomer = (ross) =>{
+        console.log('this is ross (the user we are passing in)',ross)
+    }
 
     fetchCustomers = () =>{
         console.log(this)
@@ -41,8 +36,6 @@ class RestaurantIndex extends Component{
         .catch((err)=>{
         })
     }
-
-
     // because componentWillMount will still allow the component to intialize before running, we can protect ourselves
     // by putting an if statement before anytime we want to loop through something in our state
     showAllCustomers = () => {
@@ -85,6 +78,10 @@ class RestaurantIndex extends Component{
             <AddNewCustomer letTheIndexComponentKnowThatWeAddedACustomer = {this.fetchCustomers} />
             {/* we pass in this function so that after we add a new project in the addNewProject component */}
             {/* that component will be able to tell this component to go check for new projects */}
+            </div>
+
+            <div>
+            <UpdateSpending updateCustomer = {this.updateCustomer} />
             </div>
 
             <div className="show-all-customers">
