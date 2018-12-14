@@ -20,6 +20,27 @@ class RestaurantIndex extends Component{
     // the response we ge back should be equal to an object with a .data key inside it, and that .data will be equal to all the tasks from our API
     updateCustomer = (ross) =>{
         console.log('this is ross (the user we are passing in)',ross)
+        //update the allTheCustomers array up top with ross.  So what u got to do is goolge how to replace an object in an arry of object by id. then set the state (by mapping??)
+
+        // const updating = this.state.allTheCustomers.map(ross => this.state.allTheCustomers.find(j => j.id == ross.id || ross))
+        // .then((getBackFromRoss)=>{
+            const updating = this.state.allTheCustomers.map((eachCustomer) =>{
+                console.log('each customer log',eachCustomer, ross)
+                if (eachCustomer._id == ross.data._id){
+                    return ross.data;
+                } else {
+                    return eachCustomer;
+                }
+            })
+            console.log('updating is ',updating)
+            this.setState({allTheCustomers: updating})
+            // console.log('getting back from ross',getBackFromRoss);
+        // })
+        // .catch((err)=>{
+        //     console.log('there was an error',err)
+        // })
+        // console.log('I am updating == ', updating[0])
+        // return updating[0];
     }
 
     fetchCustomers = () =>{

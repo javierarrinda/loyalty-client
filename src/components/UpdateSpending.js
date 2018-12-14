@@ -30,12 +30,13 @@ class UpdateSpending extends Component{
                 console.log("each user .>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> ", eachUser.phone, this.state.phoneInput);
                return eachUser.phone == this.state.phoneInput;
             }) 
-            console.log('this is the user to update  ----',theUser)
+            console.log('this is the user to update  ----',theUser[0].spending)
                Axios.post("http://localhost:5000/api/customers/edit/"+theUser[0]._id,
                 {spending: newSpending},
                 {withCredentials: true})
                 .then((updatedSpending)=>{
-                    this.setState({theUserToUpdate: theUser})
+                    this.setState({theUserToUpdate: updatedSpending.data.spending})
+                    console.log('the user to update log',this.state.theUserToUpdate)
                     console.log('updated spending is this ', updatedSpending)
                     this.props.updateCustomer(updatedSpending);        
                 })
