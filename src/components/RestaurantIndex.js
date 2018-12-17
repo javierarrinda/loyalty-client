@@ -4,6 +4,8 @@ import Axios from 'axios';
 import {Link} from 'react-router-dom';
 
 
+import Rewards from './Rewards';
+import NewReward from './NewReward';
 import AddNewCustomer from './AddNewCustomer';
 import UpdateSpending from './UpdateSpending';
 
@@ -49,7 +51,7 @@ class RestaurantIndex extends Component{
         console.log(this.props)
         Axios.get('http://localhost:5000/api/customers', {withCredentials: true})
             .then((responseFromApi)=>{
-            console.log(responseFromApi);
+            console.log('this is the response from api for customers',responseFromApi);
             this.setState({allTheCustomers: responseFromApi.data.customerForThisRest.reverse()}) 
             // .reverse is just so we see the newest tasks at the top of the page
             // once we get all the tasks, we set the state so that the state will have all the tasks in there
@@ -57,6 +59,7 @@ class RestaurantIndex extends Component{
         .catch((err)=>{
         })
     }
+
     // because componentWillMount will still allow the component to intialize before running, we can protect ourselves
     // by putting an if statement before anytime we want to loop through something in our state
     showAllCustomers = () => {
@@ -87,13 +90,13 @@ class RestaurantIndex extends Component{
         }
     }
 
-
-
     render(){
-      
+      console.log('this is this on index',this);
         return(
             <div>
-            <h1>Your Customers</h1>
+
+                <div className="space-evenly">
+
        
             <div className="add-new-customer">
             <AddNewCustomer letTheIndexComponentKnowThatWeAddedACustomer = {this.fetchCustomers} />
@@ -104,7 +107,18 @@ class RestaurantIndex extends Component{
             <div>
             <UpdateSpending updateCustomer = {this.updateCustomer} />
             </div>
+            <div className="add-new-reward">
+            <NewReward/>
+            </div>
 
+
+            <div className="show-rewards">
+            <Rewards currentUser = {this.props.currentUser}/>
+            </div>
+            
+                </div>
+
+            <h1>Your Customers</h1>
             <div className="show-all-customers">
             {this.showAllCustomers()}
             </div>

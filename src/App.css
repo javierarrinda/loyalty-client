@@ -34,8 +34,8 @@ nav img{
   border:2px solid black;
   width: 500px;
   height: 250px;
-  margin-left: 3vw;
-  margin-right: 3vw;
+  /* margin-left: 3vw; */
+  /* margin-right: 3vw; */
   padding: 10px;
   border-radius: 6px;
 }
@@ -45,7 +45,7 @@ nav img{
   width: 10vw;
   padding: 10px;
   border: 1px solid gray;
-  margin-right: 1vw; 
+  /* margin-right: 1vw;  */
   border-radius: 6px;
 }
 
@@ -60,7 +60,7 @@ label{
   padding: 10px;
   width: 300px;
   float: left;
-  margin-right: 3vw;
+  /* margin-right: 3vw; */
 }
 
 .main-page img{
@@ -122,4 +122,39 @@ button:hover {
   height: 45vh;
   border-top: 1px solid black;
   
+}
+
+.show-rewards-box{
+  float: left;
+  /* margin-right: 5vw; */
+  border: 2px solid black;
+  height: 250px;
+  padding: 10px;
+  width: 400px;
+  border-radius: 6px;
+}
+
+.new-reward-component{
+  float: left;
+  border: 2px solid black;
+  height: 250px;
+  padding: 10px;
+  /* margin-right: 2vw; */
+  border-radius: 6px;
+  width: 350px;
+}
+
+.space-evenly{
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 4vh;
+}
+
+.show-all-customers{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+h1{
+  text-align: center;
 }

@@ -6,7 +6,8 @@ import Signup from './components/Signup';
 import Login from './components/Login';
 import CustomerDetails from './components/CustomerDetails';
 import MainPage from './components/MainPage';
-import logo from "./public/lost-in-loyalty.png";
+import RewardDetails from './components/RewardDetails';
+
 
 import RestaurantIndex from './components/RestaurantIndex';
 
@@ -94,7 +95,7 @@ class App extends Component {
       <div className="mainPage">
       <nav> 
         <p>{this.showUser()}</p>
-        <Link to="/" class="link"><img src={logo}/></Link>
+        <Link to="/" class="link"><img src="/lost-in-loyalty.png" alt="loyalty"/></Link>
         <Link to="/signup" class="link"> Register</Link>
         <Link to="/login" class="link"> Login </Link>
         <Link to='/restaurant-index' class="link"> Customers</Link>
@@ -107,6 +108,7 @@ class App extends Component {
 
           <Route path="/restaurant-index" render={(props) => <RestaurantIndex {...props} currentUser={this.state.loggedInUser} /> } />
           <Route path="/customers/details/:id" component = {CustomerDetails} />
+          <Route path="/rewards/edit/:id" component = {RewardDetails}/>
           <Route path="/" component = {MainPage}/>
         </Switch>
         

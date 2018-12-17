@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 
-import logo from "../public/lost-in-loyalty.png";
 
-import kodak from "../public/kodak.png";
 
 class MainPage extends Component{
     render(){
@@ -11,7 +9,7 @@ class MainPage extends Component{
         
         
         <div className="header">
-            <img src={logo} alt="loyalty"/>
+            <img src="/lost-in-loyalty.png" alt="loyalty"/>
         </div>
         <div className="our-mission">
 
@@ -27,9 +25,9 @@ class MainPage extends Component{
 
         <div className="team-images">
 
-            <img className="kodak" src={kodak} alt="kodak"/>
-            <img className="kodak" src={kodak} alt="kodak"/>
-            <img className="kodak" src={kodak} alt="kodak"/>
+            <img className="kodak" src="/kodak.png" alt="kodak"/>
+            <img className="kodak" src="/kodak.png" alt="kodak"/>
+            <img className="kodak" src="/kodak.png" alt="kodak"/>
 
         </div>
 
