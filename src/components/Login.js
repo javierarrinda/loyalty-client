@@ -44,7 +44,7 @@ class Login extends Component {
   
     render(){
       return(
-        <div>
+        <div className="login-form">
             <form onSubmit={this.handleFormSubmit}>
                 <label>Username:</label>
                 <input type="text" name="usernameInput" value={this.state.usernameInput} onChange={ e => this.handleChange(e)}/>
@@ -52,7 +52,7 @@ class Login extends Component {
                 <label>Password:</label>
                 <input name="passwordInput" value={this.state.passwordInput} onChange={ e => this.handleChange(e)} />
                 
-                <input type="submit" value="Login" />
+                <button type="submit" value="Login">Continue</button>
             </form>
 
 
