@@ -98,7 +98,7 @@ class App extends Component {
         <Link to="/" class="link"><img src="/lost-in-loyalty.png" alt="loyalty"/></Link>
         <Link to="/signup" class="link"> Register</Link>
         <Link to="/login" class="link"> Login </Link>
-        <Link to='/restaurant-index' class="link"> Customers</Link>
+        <Link to='/restaurant-index' class="link" > Customers</Link>
         <button onClick = {this.logout} >Logout</button>
       </nav>
 

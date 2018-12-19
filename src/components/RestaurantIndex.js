@@ -10,9 +10,14 @@ import AddNewCustomer from './AddNewCustomer';
 import UpdateSpending from './UpdateSpending';
 
 class RestaurantIndex extends Component{
-    state={
-        allTheCustomers: []
-    }
+
+    //look at to-do-list client at between signup and app.js (something is sent from one to the other ) from there look at single project id which updates the input 
+    // project index is where he actually gets the information from the logged in user
+    // this.props.currentUser._id
+
+        state={
+            allTheCustomers: []
+        }
     
     componentWillMount(){
         this.fetchCustomers()
@@ -113,7 +118,7 @@ class RestaurantIndex extends Component{
 
 
             <div className="show-rewards">
-            <Rewards currentUser = {this.props.currentUser}/>
+            <Rewards currentUser = {this.props.currentUser} />
             </div>
             
                 </div>

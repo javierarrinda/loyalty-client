@@ -4,13 +4,15 @@ import {Link} from 'react-router-dom';
 import Axios from 'axios';
 
 class Rewards extends Component{
+        
     state={
-        allTheRewards: []
-    }
+            allTheRewards: []
+        }
 
     componentWillMount(){
        this.fetchRewards()
     }
+
 
     fetchRewards = () =>{
         console.log(this)

@@ -44,17 +44,20 @@ class Login extends Component {
   
     render(){
       return(
-        <div className="login-form">
+        <div className="login-form-parent">
+                    <div className="login-form">
+
             <form onSubmit={this.handleFormSubmit}>
                 <label>Username:</label>
                 <input type="text" name="usernameInput" value={this.state.usernameInput} onChange={ e => this.handleChange(e)}/>
-                
+                <br/><br/>
                 <label>Password:</label>
                 <input name="passwordInput" value={this.state.passwordInput} onChange={ e => this.handleChange(e)} />
                 
                 <button type="submit" value="Login">Continue</button>
             </form>
 
+                    </div>
 
     </div>
       )

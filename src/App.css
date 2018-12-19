@@ -68,7 +68,7 @@ label{
 }
 
 .header{
-  height: 80vh;
+  height: 85vh;
   display: flex;
   justify-content: center;
   align-content: center;
@@ -103,9 +103,30 @@ button:hover {
   color: white;
 }
 
+.login-form-parent{
+  display: flex;
+  justify-content: center;
+}
+
 
 .login-form{
-  display: column;
+  border: 2px solid grey;
+  border-radius: 25px;
+  height: 50vh; 
+  width: 30vw;
+  padding: 10px;
+  margin-top: 13vh;
+}
+
+.login-form label{
+  font-size: 1.8em;
+  float: left;
+}
+
+.login-form input{
+  float: left;
+  height: 4vh;
+  border-radius: 6px;
 }
 
 .contact{
