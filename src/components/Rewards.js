@@ -37,8 +37,7 @@ class Rewards extends Component{
             return myRewards.map((eachReward)=>{
                 return(
                     <div>
-                        <h4>{eachReward.name}</h4>
-                        <Link to={'/rewards/edit/'+eachReward._id}>See Details</Link>
+                        <Link id="rewards-links" to={'/rewards/edit/'+eachReward._id}>{eachReward.name}</Link>
                     </div>
                 )
             })
@@ -51,11 +50,7 @@ class Rewards extends Component{
         return(
             <div className="show-rewards-box">
         <h2>Rewards:</h2>
-        <ul>
-            <li>
                 {this.showAllRewards()}
-            </li>
-        </ul>
 
             </div>
         )

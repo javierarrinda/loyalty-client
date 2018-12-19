@@ -31,7 +31,7 @@ nav img{
 
 .addCustomer{
   float:left;
-  border:2px solid black;
+  border:2px solid gray;
   width: 500px;
   height: 250px;
   /* margin-left: 3vw; */
@@ -45,8 +45,10 @@ nav img{
   width: 10vw;
   padding: 10px;
   border: 1px solid gray;
-  /* margin-right: 1vw;  */
   border-radius: 6px;
+  /* margin-right: 1vw; */
+  margin-left: 1.1vw;
+  margin-bottom: 2vh;
 }
 
 label{
@@ -54,11 +56,11 @@ label{
 }
 
 .update-through-phone{
-  border: 2px solid black;
+  border: 2px solid gray;
   border-radius: 6px;
   height: 250px;
   padding: 10px;
-  width: 300px;
+  width: 320px;
   float: left;
   /* margin-right: 3vw; */
 }
@@ -85,13 +87,14 @@ label{
   display: flex;
   justify-content: space-evenly;
 }
+
 .team-images img{
   height: 30vh;
 }
 
 button {
   background-color: white; 
-  color: black; 
+  color: gray; 
   border: 2px solid #008CBA;
   height: 4vh;
   border-radius: 6px;
@@ -112,22 +115,35 @@ button:hover {
 .login-form{
   border: 2px solid grey;
   border-radius: 25px;
-  height: 50vh; 
+  height: 40vh; 
   width: 30vw;
   padding: 10px;
   margin-top: 13vh;
+  background-image: url('https://i.gifer.com/hZx.gif');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.login-form label{
-  font-size: 1.8em;
-  float: left;
+.login-form span{
+  font-size: 2em;
+  /* margin-top: 10vh; */
 }
-
+/* 
 .login-form input{
-  float: left;
-  height: 4vh;
-  border-radius: 6px;
+  height: 5vh;
+  padding: 10px;
+} */
+
+.button-id{
+  display: flex;
+  justify-content: center;
+  align-content: center
 }
+
+.login-form button{
+
+}
+
 
 .contact{
   text-align: center;
@@ -141,14 +157,14 @@ button:hover {
   display: row flex wrap;
   text-align: center;
   height: 45vh;
-  border-top: 1px solid black;
+  border-top: 1px solid gray;
   
 }
 
 .show-rewards-box{
   float: left;
   /* margin-right: 5vw; */
-  border: 2px solid black;
+  border: 2px solid gray;
   height: 250px;
   padding: 10px;
   width: 400px;
@@ -157,7 +173,7 @@ button:hover {
 
 .new-reward-component{
   float: left;
-  border: 2px solid black;
+  border: 2px solid gray;
   height: 250px;
   padding: 10px;
   /* margin-right: 2vw; */
@@ -173,9 +189,59 @@ button:hover {
 
 .show-all-customers{
   display: flex;
-  justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 
 h1{
   text-align: center;
+}
+
+span{
+  float: left;
+  margin-bottom: 15px;
+}
+button{
+  float: right;
+}
+
+#rewards-links{
+  color: gray;
+  font-size: 1.2em;
+  text-decoration: none;
+}
+
+#rewards-links:hover{
+  color: black;
+}
+
+input{
+  border-radius: 1px;
+  height: 2vh;
+  margin-left: 5px;
+}
+
+h2{
+  text-align: center;
+  font-size: 1.6em;
+}
+
+.user-rewards{
+  /* border-top: 1px solid grey; */
+  border-bottom: 1px solid grey;
+  color: black;
+
+}
+
+.user-rewards-div{
+  border: 2px solid grey;
+  height: 65vh;
+  width: 20vw;
+  border-radius: 8px;
+  float: right;
+  margin-right: 10vw;
+  padding: 15px;
+  background-image: url('https://i.gifer.com/6Yrg.gif');
+  background-size: cover; 
+  opacity: 0.7;
+  
 }

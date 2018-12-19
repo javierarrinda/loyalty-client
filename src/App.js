@@ -108,7 +108,7 @@ class App extends Component {
 
           <Route path="/restaurant-index" render={(props) => <RestaurantIndex {...props} currentUser={this.state.loggedInUser} /> } />
           <Route path="/customers/details/:id" component = {CustomerDetails} />
-          <Route path="/rewards/edit/:id" component = {RewardDetails}/>
+          <Route path="/rewards/edit/:id" render= {(props)=> <RewardDetails {...props} currentUser={this.state.loggedInUser} />} />
           <Route path="/" component = {MainPage}/>
         </Switch>
         

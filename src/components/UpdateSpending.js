@@ -21,13 +21,14 @@ class UpdateSpending extends Component{
     
     updateSpending = (e) =>{
         console.log('this is User Service -- ',this.service);
+        // pass from app.js to restaurant index to update spending in order to filter (currentUser is what im passing)
         const newSpending = this.state.spendingInput;
         e.preventDefault();
         this.service.getAllCustomers()
         .then((allTheUsers)=>{
             console.log('these are all the user', allTheUsers);
             let theUser = allTheUsers.customerForThisRest.filter((eachUser)=>{
-                console.log("each user .>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> ", eachUser.phone, this.state.phoneInput);
+                console.log("each user .>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> ", eachUser, this.state);
                return eachUser.phone == this.state.phoneInput;
             }) 
             console.log('this is the user to update  ----',theUser[0].spending)
@@ -55,11 +56,15 @@ class UpdateSpending extends Component{
             <form onSubmit={this.updateSpending}>
 
             <h3>Update Customer by Number: </h3>
+                    <span>
             <label>Phone Number:</label>
             <input type="number" value={this.state.phoneInput} id="phoneInput" onChange={this.updateInput} />
-            
+                    </span>
+
+                    <span>
             <label>Spending:</label>
             <input type="number" value={this.state.spendingInput} id="spendingInput" onChange={this.updateInput} />
+                    </span>
 
             <button type="submit">Update</button>
             </form>

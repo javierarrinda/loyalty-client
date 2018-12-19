@@ -49,15 +49,20 @@ class AddNewCustomer extends Component {
             <div className="addCustomer">
                 <h2>Add New Customer:</h2>
                 <form onSubmit={this.createANewCustomer}>
-
+                        <span>
                     <label>Name:</label>
                     <input value={this.state.nameInput} id="nameInput" onChange={this.updateInput} />
+                        </span>
 
-                    <label>Phone Number:</label>
-                    <input value={this.state.phoneInput} id="phoneInput" onChange={this.updateInput} />
+                        <span>
+                    <label>Phone Num:</label>
+                    <input type="number" value={this.state.phoneInput} id="phoneInput" onChange={this.updateInput} />
+                        </span>
 
+                        <span>
                     <label>Spending:</label>
-                    <input value={this.state.spendingInput} id="spendingInput" onChange={this.updateInput} />
+                    <input type="number" value={this.state.spendingInput} id="spendingInput" onChange={this.updateInput} />
+                        </span>
 
                     <button>Add</button>
 

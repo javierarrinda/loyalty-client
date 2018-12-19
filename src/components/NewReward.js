@@ -18,7 +18,7 @@ class NewReward extends Component{
     }
 
     createANewReward = (e) =>{
-        e.preventDefault();
+        // e.preventDefault();
         const newThreshold = this.state.thresholdInput;
         const newName = this.state.nameInput;
         const newDescription = this.state.descriptionInput;
@@ -39,15 +39,21 @@ class NewReward extends Component{
         <div className="new-reward-component">
         <h2>Add Reward:</h2>
         <form onSubmit={this.createANewReward}>
+                <span>
 
         <label>Title:</label>
         <input value={this.state.nameInput} id="nameInput" onChange={this.updateInput} />
-
+                </span>
+                
+                <span>
         <label>Description:</label>
         <input type="textarea" value={this.state.descriptionInput} id="descriptionInput" onChange={this.updateInput} />
+                </span>
 
+                <span>
         <label>Spending:</label>
-        <input value={this.state.thresholdInput} id="thresholdInput" onChange={this.updateInput} />
+        <input type="number" value={this.state.thresholdInput} id="thresholdInput" onChange={this.updateInput} />
+                </span>
 
         <button>Add</button>
 
