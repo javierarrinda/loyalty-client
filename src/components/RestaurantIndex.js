@@ -98,7 +98,7 @@ class RestaurantIndex extends Component{
     render(){
       console.log('this is this on index',this);
         return(
-            <div>
+            <div className="restaurant-index">
 
                 <div className="space-evenly">
 

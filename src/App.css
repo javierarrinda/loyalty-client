@@ -49,6 +49,7 @@ nav img{
   /* margin-right: 1vw; */
   margin-left: 1.1vw;
   margin-bottom: 2vh;
+  color: black;
 }
 
 label{
@@ -109,6 +110,7 @@ button:hover {
 .login-form-parent{
   display: flex;
   justify-content: center;
+  text-align: center;
 }
 
 
@@ -117,16 +119,22 @@ button:hover {
   border-radius: 25px;
   height: 40vh; 
   width: 30vw;
-  padding: 10px;
+  padding: 30px;
   margin-top: 13vh;
-  background-image: url('https://i.gifer.com/hZx.gif');
+  background-image: url('https://i.gifer.com/1IkC.gif');
   background-repeat: no-repeat;
   background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.login-form span{
-  font-size: 2em;
-  /* margin-top: 10vh; */
+.login-form input{
+  height: 5vh;
+  font-size: 1em;
+  text-align: center;
+  border-radius: 6px;
+  width: 100%;
 }
 /* 
 .login-form input{
@@ -134,16 +142,15 @@ button:hover {
   padding: 10px;
 } */
 
-.button-id{
+#button-id{
   display: flex;
   justify-content: center;
   align-content: center
 }
 
-.login-form button{
-
-}
-
+/* .login-form button{
+  float: right;
+} */
 
 .contact{
   text-align: center;
@@ -192,6 +199,13 @@ button:hover {
   flex-wrap: wrap;
 }
 
+.restaurant-index{
+  background-image:
+  url('https://i.gifer.com/cM6.gif');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 h1{
   text-align: center;
 }
@@ -217,7 +231,7 @@ button{
 input{
   border-radius: 1px;
   height: 2vh;
-  margin-left: 5px;
+  /* margin-left: 5px; */
 }
 
 h2{
