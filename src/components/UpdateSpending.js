@@ -32,7 +32,7 @@ class UpdateSpending extends Component{
                return eachUser.phone == this.state.phoneInput;
             }) 
             console.log('this is the user to update  ----',theUser[0].spending)
-               Axios.post("http://localhost:5000/api/customers/edit/"+theUser[0]._id,
+               Axios.post(process.env.REACT_APP_API_URL + "/customers/edit/"+theUser[0]._id,
                 {spending: newSpending},
                 {withCredentials: true})
                 .then((updatedSpending)=>{

@@ -23,31 +23,36 @@ class MainPage extends Component{
             
             <h2>Our Team</h2>
 
-        <div className="team-images">
+            <div className="team-images">
 
-            <img className="kodak" src="/kodak.png" alt="kodak"/>
-            <img className="kodak" src="/kodak.png" alt="kodak"/>
-            <img className="kodak" src="/kodak.png" alt="kodak"/>
+                <img className="kodak" src="https://bit.ly/2CqWclM" alt="kodak"/>
+                <img className="kodak" src="https://bit.ly/2CqWclM" alt="kodak"/>
+                <img className="kodak" src="https://bit.ly/2CqWclM" alt="kodak"/>
+
+            </div>
+
+            <div className="team-images">
+                <h4 className="kodak">Rick</h4>
+                <h4 className="kodak">Rick</h4>
+                <h4 className="kodak">Rick</h4>
+            </div>
+
+            <div className="team-images">
+                <p className="kodak">Mad Scientist</p>
+                <p className="kodak">Mad Scientist</p>
+                <p className="kodak">Mad Scientist</p>
+            </div>
+
 
         </div>
-
-        </div>
-
-
-        <div className="contact">
-        <h2>Contact Us</h2>
-        <label>Drop a line:</label>
-        <br/>
-        <input type="textarea"/>
-        <br/>
-        <br/>
-        <button>Send</button>
-        <div className="contact-us">
         
-        <h5>Follow us on Twitter</h5>
-        <h5>Follow us on Instagram</h5>
-        </div>
-        </div>
+        
+            <div className="contact-us">
+        
+        <h4>Follow us on Twitter</h4>
+        <h4>Follow us on Instagram</h4>
+        
+            </div>
         
         
         

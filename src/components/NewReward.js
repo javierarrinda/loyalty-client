@@ -22,11 +22,11 @@ class NewReward extends Component{
         const newThreshold = this.state.thresholdInput;
         const newName = this.state.nameInput;
         const newDescription = this.state.descriptionInput;
-        Axios.post('http://localhost:5000/api/rewards/newReward', 
+        Axios.post(process.env.REACT_APP_API_URL + '/rewards/newReward', 
         {threshold: newThreshold, name: newName, description: newDescription},
         {withCredentials: true})
         .then((rewardResponse)=>{
-            console.log('reward response here',rewardResponse)
+            console.log('reward response here tutututuutututuutututuututututututututuututututututututututu',rewardResponse)
         })
         .catch((err)=>{
             console.log('error creating reward', err);

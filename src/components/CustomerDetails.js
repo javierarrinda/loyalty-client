@@ -15,7 +15,7 @@ class CustomerDetails extends Component{
 
     componentWillMount(){
         const theID = this.props.match.params.id;
-        Axios.get('http://localhost:5000/api/customers/details/'+theID)
+        Axios.get(process.env.REACT_APP_API_URL + '/api/customers/details/'+theID)
         .then((theThingIGetBackFromApi)=>{
 
             console.log('------___---__-_-_--_-_-__-_-_-_-_-___-_-----',theThingIGetBackFromApi)
@@ -38,8 +38,9 @@ class CustomerDetails extends Component{
     }
 
     editProject = (e) => {
+        const theID = this.props.match.params.id;
         e.preventDefault();
-        Axios.post('http://localhost:5000/api/tasks/edit/'+this.state.theActualCustomer._id, 
+        Axios.post(process.env.REACT_APP_API_URL + '/customers/edit/'+theID, 
         {theTitle: this.state.nameInput, theDescription: this.state.phoneInput})
         .then(()=>{
             this.setState({editing: false});
@@ -104,7 +105,7 @@ class CustomerDetails extends Component{
 
 
     deleteProject = () =>{
-        Axios.post('http://localhost:5000/api/tasks/delete/'+this.state.theActualCustomer._id, {})
+        Axios.post('https://localhost:5000/api/tasks/delete/'+this.state.theActualCustomer._id, {})
         .then(()=>{
             
             this.props.history.push('/project-index');

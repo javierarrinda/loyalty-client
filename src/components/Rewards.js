@@ -16,7 +16,7 @@ class Rewards extends Component{
 
     fetchRewards = () =>{
         console.log(this)
-        Axios.get('http://localhost:5000/api/rewards', {withCredentials: true})
+        Axios.get(process.env.REACT_APP_API_URL + '/rewards', {withCredentials: true})
         .then((apiRewards)=>{
             console.log('api rewards go here',apiRewards);
             this.setState({allTheRewards: apiRewards.data.rewardGotten})
@@ -27,7 +27,7 @@ class Rewards extends Component{
     }
 
     showAllRewards = () =>{
-       console.log('thisthisthisthis',this)
+       
         if(this.state.allTheRewards && this.props.currentUser){
             const myRewards = this.state.allTheRewards.filter((eachReward)=>{
                 console.log("each reward", eachReward)
@@ -49,8 +49,10 @@ class Rewards extends Component{
     render(){
         return(
             <div className="show-rewards-box">
-        <h2>Rewards:</h2>
+        <h1>Rewards:</h1>
+        <h4>
                 {this.showAllRewards()}
+        </h4>
 
             </div>
         )

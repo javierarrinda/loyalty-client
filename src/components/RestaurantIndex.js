@@ -54,7 +54,7 @@ class RestaurantIndex extends Component{
         console.log(this)
 
         console.log(this.props)
-        Axios.get('http://localhost:5000/api/customers', {withCredentials: true})
+        Axios.get(process.env.REACT_APP_API_URL + '/customers', {withCredentials: true})
             .then((responseFromApi)=>{
             console.log('this is the response from api for customers',responseFromApi);
             this.setState({allTheCustomers: responseFromApi.data.customerForThisRest.reverse()}) 
@@ -85,9 +85,9 @@ class RestaurantIndex extends Component{
 
                      <h3>{eachCustomer.name}</h3>
                      <h3>Phone #: {eachCustomer.phone}</h3>
-                    <h4>Spent: {eachCustomer.spending}</h4>
+                    <h4>Spent: $ {eachCustomer.spending}</h4>
 
-                    <Link to={'/customers/details'+ eachCustomer._id} >See Details</Link> 
+                    {/* <Link to={'/customers/details'+ eachCustomer._id} >See Details</Link>  */}
                     </div>
                 </div>
             )

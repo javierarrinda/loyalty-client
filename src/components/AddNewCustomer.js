@@ -26,7 +26,7 @@ class AddNewCustomer extends Component {
 
         // gotta send withCredentials: true as a header because
         // the route we are posting to uses req.user which is by default protected by express
-        Axios.post("http://localhost:5000/api/customers/newCustomer",
+        Axios.post(process.env.REACT_APP_API_URL + "/customers/newCustomer",
          {name: newName, spending: newSpending, phone: newPhone},
          {withCredentials: true})
          .then((responseFromOurApi)=>{

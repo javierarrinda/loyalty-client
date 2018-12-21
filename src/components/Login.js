@@ -63,7 +63,7 @@ class Login extends Component {
 
 
             
-                <button id="button-id" type="submit" value="Login">Continue</button>
+                <button className="button-id" type="submit" value="Login">Continue</button>
                 
             
                         </form>
