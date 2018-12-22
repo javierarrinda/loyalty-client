@@ -86,6 +86,8 @@ label{
   background-color: lightgrey;
   text-align: center;
   font-size: 1.4em; 
+  padding-top: 30px;
+  border-top: 1px solid black;
 }
 
 .team-images{

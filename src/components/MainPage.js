@@ -11,13 +11,7 @@ class MainPage extends Component{
         <div className="header">
             <img src="/lost-in-loyalty.png" alt="loyalty"/>
         </div>
-        <div className="our-mission">
 
-            <h2>Our Mission</h2>
-            
-            <p>Cradles to Crayons: Provides children from <br/>birth through age 12, living in homeless or low-income<br/> situations, with the essential items<br/> they need to thrive<br/> – at home, at school and at play.</p>
-            
-        </div>
 
         <div className="our-team">
             
@@ -45,6 +39,17 @@ class MainPage extends Component{
 
 
         </div>
+
+
+
+        <div className="our-mission">
+
+            <h2>Our Mission</h2>
+            
+            <p>Cradles to Crayons: Provides children from <br/>birth through age 12, living in homeless or low-income<br/> situations, with the essential items<br/> they need to thrive<br/> – at home, at school and at play.</p>
+            
+        </div>
+
         
         
             <div className="contact-us">
