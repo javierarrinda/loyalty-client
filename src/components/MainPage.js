@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Link} from 'react-router-dom';
 
 
 
@@ -9,7 +10,31 @@ class MainPage extends Component{
         
         
         <div className="header">
+        
+        <div className="left-side">
+        
+            <div className="quote">
+                <h3>A customer is the most important visitor on our premises, he is not dependant on us. We are dependant on them.</h3>
+                <h5>Mahatma Gandhi</h5>
+            </div>
+
+            <div className="index-buttons">
+                <button><Link to="/signup" class="link"> Register</Link></button>
+
+                <button><Link to="/login" class="link"> Login </Link></button>
+            </div>
+
+            <div className="more-about-us">
+                <button id="about-us-button">
+                    <a href="https://en.wikipedia.org/wiki/Loyalty_business_model">More About Us</a> 
+                </button>
+            </div>
+
+        </div>
+
             <img src="/lost-in-loyalty.png" alt="loyalty"/>
+
+            {/* <button id="signup">Signup</button> */}
         </div>
 
 
