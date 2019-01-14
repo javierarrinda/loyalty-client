@@ -76,6 +76,7 @@ label{
 }
 
 .header{
+  background: url(./cool-background.png); 
   height: 85vh;
   display: flex;
   /* justify-content: center;
@@ -96,6 +97,10 @@ label{
 .quote{
   width: 27vw;
   text-align: center; 
+}
+
+.quote h5{
+  margin-bottom: -2vh;
 }
 
 .more-about-us button{
@@ -124,13 +129,8 @@ label{
   color: white;
 }
 
-.our-team{
-  height: 45vh;
-  background-color: lightgrey;
-  text-align: center;
-  font-size: 1.4em; 
-  padding-top: 30px;
-  border-top: 1px solid black;  
+.about-me{
+   
   /* border-bottom: 1px solid black;   */
 }
 
@@ -141,7 +141,7 @@ label{
 }
 
 .team-images h4{
-  margin-bottom: -3vh;
+  margin-bottom: -1vh;
   text-align: center;  
 }
 
@@ -149,6 +149,27 @@ label{
   height: 25vh;
   margin-bottom: -3.5vh;
 }
+
+.our-team{
+  display: flex;
+  justify-content: space-around;
+  height: 45vh;
+  background-color: lightgrey;
+  text-align: center;
+  font-size: 1.4em; 
+  padding-top: 30px;
+  border-top: 1px solid black; 
+}
+
+.cool-links{
+  display: flex;
+  flex-flow: column;
+}
+
+.cool-links a{
+  margin-bottom: 1vh;
+}
+
 
 button {
   background-color: white; 
@@ -211,20 +232,15 @@ button:hover {
   float: right;
 } */
 
-.contact-us{
-  text-align: center;
-  display: flex;
-  flex-flow: column;
-}
 
 .our-mission{
   display: flex;
   flex-flow: column;
   justify-content: center;
   text-align: center;
-  height: 30vh;
+  height: 35vh;
   border-top: 1px solid gray;
-  
+  background-color: #ededed;
 }
 
 .show-rewards-box{
@@ -348,4 +364,17 @@ h2{
   flex-flow: column;
   /* text-align: center; */
   justify-content: space-evenly;
+}
+
+
+#me-photo{
+  border-radius: 10px;
+  margin-bottom: 0.3vh;
+}
+
+
+footer{
+  text-align: center;
+  background-color: black;
+  color: white;
 }

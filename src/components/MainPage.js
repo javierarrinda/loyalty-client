@@ -38,32 +38,6 @@ class MainPage extends Component{
         </div>
 
 
-        <div className="our-team">
-            
-            <h2>Our Team</h2>
-
-            <div className="team-images">
-
-                <img className="kodak" src="https://bit.ly/2CqWclM" alt="kodak"/>
-                <img className="kodak" src="https://bit.ly/2CqWclM" alt="kodak"/>
-                <img className="kodak" src="https://bit.ly/2CqWclM" alt="kodak"/>
-
-            </div>
-
-            <div className="team-images">
-                <h4 className="kodak">Rick</h4>
-                <h4 className="kodak">Rick</h4>
-                <h4 className="kodak">Rick</h4>
-            </div>
-
-            <div className="team-images">
-                <p className="kodak">Mad Scientist</p>
-                <p className="kodak">Mad Scientist</p>
-                <p className="kodak">Mad Scientist</p>
-            </div>
-
-
-        </div>
 
 
 
@@ -75,16 +49,53 @@ class MainPage extends Component{
             
         </div>
 
-        
-        
-            <div className="contact-us">
-        
-        <h4>Follow us on Twitter</h4>
-        <h4>Follow us on Instagram</h4>
-        
+        <div className="our-team">
+
+            <div className="about-me">
+
+
+            
+                <h2>About Me</h2>
+
+                <div className="team-images">
+
+                {/* <img className="kodak" src="https://bit.ly/2CqWclM" alt="kodak"/> */}
+                <img id="me-photo" src="https://bit.ly/2CjFvro" alt="Javier Arrinda .jpg"/>
+                {/* <img className="kodak" src="https://bit.ly/2CqWclM" alt="kodak"/> */}
+
+                </div>
+
+                <div className="team-images">
+                {/* <h4 className="kodak">Rick</h4> */}
+                <h4 className="kodak">Javier Arrinda</h4>
+                {/* <h4 className="kodak">Rick</h4> */}
+                </div>
+
+                <div className="team-images">
+                {/* <p className="kodak">Mad Scientist</p> */}
+                <p className="kodak">Programmer/Web-developer/Visionary</p>
+                {/* <p className="kodak">Mad Scientist</p> */}
+                </div>
+
             </div>
+
+            <div className="cool-links">
+            
+                <h2>Buncha Cool Links</h2>
+
+                <a href="https://www.youtube.com/watch?v=0QO0yZldC2M&t=123s">Reddit R/Place</a>
+                <a href="https://www.nicereply.com/blog/the-importance-of-customer-loyalty/">Importance of Customer Loyalty</a>
+                <a href="https://github.com/javierarrinda">My Github!!!</a>
+                <a href="">Add me on LinkedIn</a>
+            
+            </div>
+
+
+        </div>
         
         
+        
+            <footer>A creation forced upon the creative.</footer>
         
         </div>
         )
